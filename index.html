@@ -382,13 +382,14 @@
         }
 
         .memory-carousel {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.5s ease;
-            padding: 0 50px;
-        }
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-start; /* เปลี่ยนจาก center เป็น flex-start */
+    transition: transform 0.5s ease;
+    padding: 0 50px;
+    width: max-content; /* เพิ่มบรรทัดนี้ */
+}
 
         /* ปุ่มเลื่อนการ์ด */
         .carousel-nav {
@@ -1061,4 +1062,5 @@ function updateCarousel() {
 </body>
 
 </html>
+
 
