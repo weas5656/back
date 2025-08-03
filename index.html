@@ -728,13 +728,9 @@
         // Carousel functions
        // แก้ไขฟังก์ชัน updateCarousel()
 function updateCarousel() {
-    // คำนวณขนาดการ์ดจากการ์ดจริงๆ
-    const cardElement = document.querySelector('.memory-card');
-    const cardWidth = cardElement ? cardElement.offsetWidth : 400;
-    const gap = window.innerWidth <= 768 ? 20 : 40; // gap ระหว่างการ์ด
-    
-    const translateX = currentCard * (cardWidth + gap);
-    carousel.style.transform = `translateX(-${translateX}px)`;
+    // ใช้ percentage แทน pixel
+    const translatePercent = currentCard * 100;
+    carousel.style.transform = `translateX(-${translatePercent}%)`;
     
     // Update indicators
     indicators.forEach((indicator, index) => {
@@ -1069,6 +1065,7 @@ function updateCarousel() {
 </body>
 
 </html>
+
 
 
 
